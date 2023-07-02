@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="weather">
+      <div class="weather__input">
+        <button class="locationBtn">Get Weather data of other location</button>
+        <button class="locationBtncurrent">
+          Get Weather data of current location
+        </button>
+        <form action="" id="cityform">
+          <input type="text" name="city" id="city" placeholder="Insert City" />
+          <input
+            type="text"
+            name="state"
+            id="state"
+            placeholder="Insert State(optional)"
+          />
+          <input type="submit" value="Find" />
+        </form>
+      </div>
+      <div class="errorText"></div>
+      <div class="weather__body">
+        <div class="weather__result__title">
+          <span class="locationStatus">Your Location</span> Current Weather
+          Result
+        </div>
+        <div class="weather__result__current">
+          <div class="result__current__left">
+            <div class="weather__icon">
+              <img src="./icons/01d.svg" alt="" />
+            </div>
+            <div>
+              <div class="currentCity"></div>
+              <div class="currentState"></div>
+              <div class="">Temprature</div>
+              <div class="temprature">
+                <span class="temp"></span><sup>o</sup>c
+              </div>
+            </div>
+          </div>
+          <div class="result__current__right">
+            <div>
+              <div>humidity : <span class="humidity"></span>%</div>
+              <div>wind : <span class="wind"></span>m/s</div>
+              <div class="desc"></div>
+            </div>
+            <div class="header_right_right">
+              <div class="date">jan-22-2023</div>
+              <div class="time">15:12</div>
+            </div>
+          </div>
+        </div>
+        <div class="weather__result__weekly">
+          <div class="weather__result__title">Weekly Weather Result</div>
+          <div class="week">
+            <!-- <div class="week_day">
+              <div class="day">Mon</div>
+              <div class="day_icon">
+                <img src="./icons/01d.svg" alt="" srcset="" id="weather-icon" />
+              </div>
+              <div class="day_temp">
+                <div class="day_temp_high">23&deg;C</div>
+                <div class="day_temp_low">3&deg;C</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
